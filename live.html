@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Room</title>
+  <link rel="stylesheet" href="live.css">
+</head>
+<body>
+  <h1>🎙 Ghost Live Room</h1>
+  <h2 id="myGhostName">👻 Welcome!</h2>
+  <p id="participantCount">👥 People in room: 0</p>
+  <div id="participantList"></div>
+  <div id="ghostSpeaking-${participantId}" style="margin-left: 8px;"></div>
+
+
+
+
+  <input type="text" id="roomIdInput" placeholder="Enter or create room ID" />
+  <button id="createRoom" class="createRoom">Create Room</button>
+  <button id="joinRoom" class="joinRoom">Join Room</button>
+  <button id="quitRoom"  class="quitRoom">Quit Room</button>
+  <button id="toggleMute" class="muteButton">
+    <img id="muteIcon" src="micro.png" alt="Mute" />
+
+  </button>
+  
+
+
+
+  <h2>🔊 Remote Audio</h2>
+  <audio id="remoteAudio" autoplay controls playsinline></audio>
+
+  <script type="module" src="live.js"></script>
+ 
+  
+</body>
+</html>

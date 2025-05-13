@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostPost</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+   
+
+    
+
+
+    <button id="enableNotifications">🔔</button>
+
+   
+        
+
+    <div class="container">
+        <img src="GHOST.PNG" alt="GhostPost Logo" class="logo-image">
+        <h1 class="logo-text">Ghost<span>Post</span></h1>
+        
+        <label for="interest">Select Interest:</label>
+        <select id="interest">
+            <option value="all">All</option>
+            <option value="tech">Tech</option>
+            <option value="health">Health</option>
+            <option value="sports">Sports</option>
+        </select>
+        <textarea id="postContent" placeholder="Write an anonymous message..." maxlength="150"></textarea>
+        <button onclick="submitPost()">Post Anonymously</button>
+        
+        <h2>Create a Vocal Post</h2>
+        <button id="startRecording" class="record-button">🎤 Start Recording</button>
+        <button id="stopRecording" class="record-button" disabled>🛑 Stop Recording</button>
+        <audio id="audioPreview" controls style="display: none;"></audio>
+      
+        
+
+
+   
+        
+       
+        
+        <div class="post"></div>
+    
+    </div>
+
+    <script type="module" src="home.js"></script>
+</body>
+</html>

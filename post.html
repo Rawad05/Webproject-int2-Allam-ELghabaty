@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>GhostPost</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="post.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button id="enableNotifications">🔔</button>
+
+  <div id="scoreContainer" class="button-row">
+    <span class="score-label"> <span id="userScore">0</span></span>
+    <button id="myPostsButton" class="styled-button blue">📄 My Posts</button>
+    <button id="allPostsButton" class="styled-button turquoise">🌍 All Posts</button>
+    <a href="home.html"><button id="writePostButton" class="styled-button green">✏️ Post</button></a>
+    <a href="live.html"><button id="liveRoomButton" class="styled-button green">🎙 Live Room</button></a>
+  </div>
+
+  <div class="container">
+    <img src="GHOST.PNG" alt="GhostPost Logo" class="logo-image">
+    <h1 class="logo-text">Ghost<span>Post</span></h1>
+    <hr>
+    <h2>Recent Posts</h2>
+    <div id="postsContainer">
+      <audio controls>
+        <source src="https://firebasestorage.googleapis.com/v0/b/ghost-6b043.firebasestorage.app/o/audio%2Fmon-audio.wav?alt=media" type="audio/wav">
+      </audio>
+    </div>
+  </div>
+
+  <script type="module" src="home.js"></script>
+  <script>
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function () {
+      const scoreBar = document.getElementById("scoreContainer");
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        scoreBar.classList.add("hidden");
+      } else {
+        scoreBar.classList.remove("hidden");
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
+</body>
+</html>
